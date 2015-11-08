@@ -1,0 +1,13 @@
+@(pList: List[models.Product])
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	@for(p<-pList){
+		<p>@p.getName</p>
+	}
+</body>
+</html>

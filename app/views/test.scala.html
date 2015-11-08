@@ -1,0 +1,14 @@
+@(pList: List[models.User])
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	@pList.size();
+	@for(i<-pList){
+		@i.getId @i.getName	
+	}
+</body>
+</html>

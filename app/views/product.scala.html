@@ -1,0 +1,40 @@
+@(productForm:Form[models.Product],id:Long)
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add products</title>
+</head>
+<body>
+idididididi：@productForm("id").value
+	<form class="register form-horizontal" action="save" method="POST">
+	 <input type="hidden" value="@id" name="id"> 
+		<fieldset>
+			<legend> @productForm("name").valueOr("New") product</legend>
+			<div class="controls">
+				<input type="text" value="@productForm("name").value" name="name" placeholder="Product name">
+				<p class="help-inline">
+					<small>Required</small>
+				</p>
+			</div>
+			<div class="controls">
+				<input type="text" value="@productForm("ean").value" name="ean"
+					placeholder="Product ean">
+				<p class="help-inline">
+					<small>Required</small>
+				</p>
+			</div>
+			<div class="controls">
+				<textarea type="text" name="description"
+					placeHolder="Enter the product description">@productForm("description").value</textarea>
+			</div>
+		</fieldset>
+		<div class="form-actions">
+			<input type="submit" value="@if(id==null) { Create} else {Save}"
+				class="btn btn-primary">
+		</div>
+		
+		
+	</form>
+</body>
+</html>

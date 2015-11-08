@@ -1,0 +1,13 @@
+@(products:Set[Product])
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	@for(product<-products){
+ name:  <a href="@routes.Products.edit(product.Id)">@product.name</a>  id：@product.Id</br>
+ }  
+</body>
+</html>
